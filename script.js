@@ -1,15 +1,26 @@
-const yesBtn = document.getElementById('yesBtn');
-const noBtn = document.getElementById('noBtn');
-const result = document.getElementById('result');
+let noBtn = document.getElementById("noBtn");
+let yesBtn = document.getElementById("yesBtn");
+let result = document.getElementById("result");
 
-yesBtn.addEventListener('click', () => {
-  result.innerHTML = "Yaaay! 💕 love you meri jaan! 💍";
+yesBtn.addEventListener("click", function() {
+    result.innerHTML = "Yay! ❤️ I’m so happy!";
 });
 
-noBtn.addEventListener('mouseover', () => {
-  const x = Math.floor(Math.random() * window.innerWidth - 100);
-  const y = Math.floor(Math.random() * window.innerHeight - 100);
-  noBtn.style.position = 'absolute';
-  noBtn.style.left = `${x}px`;
-  noBtn.style.top = `${y}px`;
+// Function to move No button
+function moveNoButton() {
+    let x = Math.floor(Math.random() * (window.innerWidth - noBtn.offsetWidth));
+    let y = Math.floor(Math.random() * (window.innerHeight - noBtn.offsetHeight));
+
+    noBtn.style.position = "absolute";
+    noBtn.style.left = `${x}px`;
+    noBtn.style.top = `${y}px`;
+}
+
+// PC hover ke liye
+noBtn.addEventListener("mouseover", moveNoButton);
+
+// Mobile touch ke liye
+noBtn.addEventListener("touchstart", function(e) {
+    e.preventDefault(); // accidental click se bachaane ke liye
+    moveNoButton();
 });
