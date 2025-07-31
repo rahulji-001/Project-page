@@ -3,7 +3,7 @@ let yesBtn = document.getElementById("yesBtn");
 let result = document.getElementById("result");
 
 yesBtn.addEventListener("click", function() {
-    result.innerHTML = "Yay! ❤️ I’m so happy!";
+    result.innerHTML = "Yay! ❤️ I LOVE YOU MERI JAAN 😘!";
 });
 
 // Function to move No button
