@@ -11,7 +11,7 @@ body {
 }
 
 .container {
-  background: url('../white') ;
+  background: url('../pup.jpg') ;
   background-size: contain;
   background-position: center ;
   border-radius: 20px;
