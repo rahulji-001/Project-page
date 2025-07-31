@@ -14,22 +14,19 @@ let messages = [
 
 let clickCount = 0;
 
-// No button click ka function
 noBtn.addEventListener("click", () => {
-    // Background & text change
+    // Background aur text change
     clickCount++;
     document.body.style.backgroundImage = `url('${bgImages[clickCount % bgImages.length]}')`;
     proposalText.innerText = messages[clickCount % messages.length];
 
-    // Button ko random position me ghumana
+    // Button ko screen me random jagah le jana
     let x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
     let y = Math.random() * (window.innerHeight - noBtn.offsetHeight);
-    noBtn.style.position = "absolute";
     noBtn.style.left = `${x}px`;
     noBtn.style.top = `${y}px`;
 });
 
-// Yes button click ka function
 yesBtn.addEventListener("click", () => {
-    result.innerText = "Yay! ❤️ Mujhe pata tha tum maan jaogi 😍 I love you meri jaan 😘";
+    result.innerText = "Yay! ❤️😍 I love you meri jaan 😘";
 });
