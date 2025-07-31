@@ -34,6 +34,7 @@ button {
 }
 
 #noBtn {
-    background-color: lightgray;
+    background-color: red;
+    color: white;
     position: absolute;
 }
