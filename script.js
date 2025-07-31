@@ -31,5 +31,5 @@ noBtn.addEventListener("click", () => {
 
 // Yes button click ka function
 yesBtn.addEventListener("click", () => {
-    result.innerText = "Yay! ❤️ Mujhe pata tha tum maan jaogi 😍";
+    result.innerText = "Yay! ❤️ Mujhe pata tha tum maan jaogi 😍 I love you meri jaan 😘";
 });
