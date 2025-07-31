@@ -1,26 +1,35 @@
-let noBtn = document.getElementById("noBtn");
-let yesBtn = document.getElementById("yesBtn");
-let result = document.getElementById("result");
+const noBtn = document.getElementById("noBtn");
+const yesBtn = document.getElementById("yesBtn");
+const proposalText = document.getElementById("proposalText");
+const result = document.getElementById("result");
 
-yesBtn.addEventListener("click", function() {
-    result.innerHTML = "Yay! ❤️ I LOVE YOU MERI JAAN 😘!";
-});
+let bgImages = ["images.jpg", "pup.jpg"];
+let messages = [
+    "Will you marry me Sakshi ji? 💍",
+    "Ek baar soch le 😏",
+    "Baav mat khao 😜",
+    "Maan bhi jao 🥺",
+    "Mere se achha nhi milega 😉"
+];
 
-// Function to move No button
-function moveNoButton() {
-    let x = Math.floor(Math.random() * (window.innerWidth - noBtn.offsetWidth));
-    let y = Math.floor(Math.random() * (window.innerHeight - noBtn.offsetHeight));
+let clickCount = 0;
 
+// No button click ka function
+noBtn.addEventListener("click", () => {
+    // Background & text change
+    clickCount++;
+    document.body.style.backgroundImage = `url('${bgImages[clickCount % bgImages.length]}')`;
+    proposalText.innerText = messages[clickCount % messages.length];
+
+    // Button ko random position me ghumana
+    let x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
+    let y = Math.random() * (window.innerHeight - noBtn.offsetHeight);
     noBtn.style.position = "absolute";
     noBtn.style.left = `${x}px`;
     noBtn.style.top = `${y}px`;
-}
+});
 
-// PC hover ke liye
-noBtn.addEventListener("mouseover", moveNoButton);
-
-// Mobile touch ke liye
-noBtn.addEventListener("touchstart", function(e) {
-    e.preventDefault(); // accidental click se bachaane ke liye
-    moveNoButton();
+// Yes button click ka function
+yesBtn.addEventListener("click", () => {
+    result.innerText = "Yay! ❤️ Mujhe pata tha tum maan jaogi 😍";
 });
