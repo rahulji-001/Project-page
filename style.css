@@ -15,6 +15,8 @@ body {
     border-radius: 15px;
     display: inline-block;
     margin-top: 10%;
+    position: relative;
+    z-index: 10;
 }
 
 button {
@@ -33,5 +35,5 @@ button {
 
 #noBtn {
     background-color: lightgray;
-    position: relative;
+    position: absolute;
 }
